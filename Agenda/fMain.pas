@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
 
 type
-  TForm1 = class(TForm)
+  TFrmMain = class(TForm)
     MainMenu1: TMainMenu;
     Cadastros1: TMenuItem;
     Cadastros2: TMenuItem;
@@ -22,7 +22,7 @@ type
   end;
 
 var
-  Form1: TForm1;
+  FrmMain: TFrmMain;
 
 implementation
 
@@ -30,9 +30,9 @@ implementation
 
 uses fClientes;
 
-procedure TForm1.Clientes1Click(Sender: TObject);
+procedure TFrmMain.Clientes1Click(Sender: TObject);
 begin
-  Form2.ShowModal;
+  FrmClientes.ShowModal;
 end;
 
 end.

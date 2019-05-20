@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TForm2 = class(TForm)
+  TFrmClientes = class(TForm)
   private
     { Private declarations }
   public
@@ -15,15 +15,11 @@ type
   end;
 
 var
-  Form2: TForm2;
+  FrmClientes: TFrmClientes;
 
 implementation
 
 {$R *.dfm}
 
-procedure asdad();
-begin
-
-end;
 
 end.
