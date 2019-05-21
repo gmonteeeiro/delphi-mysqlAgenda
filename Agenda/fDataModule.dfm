@@ -1,5 +1,6 @@
 object DataModule1: TDataModule1
   OldCreateOrder = False
+  OnCreate = DataModuleCreate
   Height = 354
   Width = 352
   object FDConnection1: TFDConnection
@@ -24,6 +25,7 @@ object DataModule1: TDataModule1
       FieldName = 'int'
       Origin = '`int`'
       ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
     end
     object FDQuery1nome: TStringField
       FieldName = 'nome'
@@ -53,5 +55,10 @@ object DataModule1: TDataModule1
     Provider = 'Forms'
     Left = 168
     Top = 104
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'F:\GitHub\delphi-mysqlAgenda\Agenda\libmysql.dll'
+    Left = 248
+    Top = 192
   end
 end

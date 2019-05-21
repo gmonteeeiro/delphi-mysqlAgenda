@@ -20,6 +20,8 @@ type
     FDQuery1nome: TStringField;
     FDQuery1telefone: TStringField;
     FDQuery1email: TStringField;
+    FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink;
+    procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -34,5 +36,10 @@ implementation
 {%CLASSGROUP 'Vcl.Controls.TControl'}
 
 {$R *.dfm}
+
+procedure TDataModule1.DataModuleCreate(Sender: TObject);
+begin
+  FDPhysMySQLDriverLink1.VendorLib := GetCurrentDir + '\libmysql.dll';
+end;
 
 end.
