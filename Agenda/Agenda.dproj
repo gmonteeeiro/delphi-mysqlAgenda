@@ -102,10 +102,6 @@
             <Form>FrmMain</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="fClientes.pas">
-            <Form>FrmClientes</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="fDataModule.pas">
             <Form>DataModule1</Form>
             <FormType>dfm</FormType>
