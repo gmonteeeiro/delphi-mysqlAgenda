@@ -63,5 +63,6 @@ object FrmMain: TFrmMain
     Height = 43
     Caption = '+'
     TabOrder = 1
+    OnClick = Button1Click
   end
 end

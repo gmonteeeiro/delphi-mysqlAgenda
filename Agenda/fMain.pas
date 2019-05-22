@@ -12,6 +12,7 @@ type
     DBGrid1: TDBGrid;
     Button1: TButton;
     procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -25,7 +26,12 @@ implementation
 
 {$R *.dfm}
 
-uses fDataModule;
+uses fDataModule, fCadastra;
+
+procedure TFrmMain.Button1Click(Sender: TObject);
+begin
+  FrmCadastra.ShowModal;
+end;
 
 procedure TFrmMain.FormCreate(Sender: TObject);
 var
