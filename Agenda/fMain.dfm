@@ -2,7 +2,7 @@ object FrmMain: TFrmMain
   Left = 0
   Top = 0
   Caption = 'FrmMain'
-  ClientHeight = 273
+  ClientHeight = 227
   ClientWidth = 407
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -10,28 +10,58 @@ object FrmMain: TFrmMain
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  Menu = MainMenu1
   OldCreateOrder = False
+  OnCreate = FormCreate
+  DesignSize = (
+    407
+    227)
   PixelsPerInch = 96
   TextHeight = 13
-  object MainMenu1: TMainMenu
-    Left = 376
-    Top = 65528
-    object Cadastros1: TMenuItem
-      Caption = 'Arquivo'
-      object Sair1: TMenuItem
-        Caption = 'Sair'
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 57
+    Width = 391
+    Height = 162
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    BiDiMode = bdLeftToRight
+    Ctl3D = True
+    DataSource = DataModule1.DataSource1
+    Options = [dgEditing, dgTitles, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+    ParentBiDiMode = False
+    ParentCtl3D = False
+    ReadOnly = True
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nome'
+        Width = 150
+        Visible = True
       end
-    end
-    object Cadastros2: TMenuItem
-      Caption = 'Cadastros'
-      object Clientes1: TMenuItem
-        Caption = 'Clientes'
-        OnClick = Clientes1Click
+      item
+        Expanded = False
+        FieldName = 'telefone'
+        Width = 82
+        Visible = True
       end
-    end
-    object Relatrios1: TMenuItem
-      Caption = 'Relat'#243'rios'
-    end
+      item
+        Expanded = False
+        FieldName = 'email'
+        Width = 127
+        Visible = True
+      end>
+  end
+  object Button1: TButton
+    Left = 8
+    Top = 8
+    Width = 57
+    Height = 43
+    Caption = '+'
+    TabOrder = 1
   end
 end

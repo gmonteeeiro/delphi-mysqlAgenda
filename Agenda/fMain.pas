@@ -4,17 +4,14 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls;
 
 type
   TFrmMain = class(TForm)
-    MainMenu1: TMainMenu;
-    Cadastros1: TMenuItem;
-    Cadastros2: TMenuItem;
-    Relatrios1: TMenuItem;
-    Clientes1: TMenuItem;
-    Sair1: TMenuItem;
-    procedure Clientes1Click(Sender: TObject);
+    DBGrid1: TDBGrid;
+    Button1: TButton;
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,11 +25,16 @@ implementation
 
 {$R *.dfm}
 
-uses fClientes;
+uses fDataModule;
 
-procedure TFrmMain.Clientes1Click(Sender: TObject);
+procedure TFrmMain.FormCreate(Sender: TObject);
+var
+  sizeNome: Integer;
 begin
-  FrmClientes.ShowModal;
+  sizeNome := DBGrid1.Width - DBGrid1.Columns[1].Width
+                            - DBGrid1.Columns[2].Width;
+
+  DBGrid1.Columns[0].Width := sizeNome;
 end;
 
 end.
